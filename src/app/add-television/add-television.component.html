@@ -1,0 +1,30 @@
+<div *ngIf="!isAdded">
+<div class="container">
+ <form> 
+  <h2>Television Details</h2><br><br>
+  <div class="form-group" style="width: 50%;">
+    <label for="Name">Television Name:</label><br>
+    <input type="text" class="form-control"  required [(ngModel)]="television.televisionName" placeholder="Enter the Television name" name="telName"><br>
+    <label for="price">Television Price:</label><br>
+    <input type="number" class="form-control" required [(ngModel)]="television.televisionPrice" placeholder="Enter the price" name="telPrice"><br>
+    <label class="image-upload-container btn btn-bwm">
+        <span>Select Image</span>
+        <input #imageInput
+               type="file"
+               accept="image/*"
+              
+               (change)="imageLoad($event)">
+               
+      </label><br><br>
+      <img [src]="imageSrc"   id="imageId" style="width: 200px; height: 200px">  
+{{imageSrc}} <br><br>
+    <button type="submit" class="btn btn-success" (click)="mainSave()">Add</button>
+   </div>
+ </form>  
+</div>
+     <div *ngIf="isAdded">
+      <h3>Data added successfully</h3>
+     </div>
+</div>
+
+

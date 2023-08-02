@@ -1,0 +1,46 @@
+<div class="container">
+    
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Television Id</th>
+                <th>Television Name</th>
+                <th>Television Price</th>
+                <th>TelevisionImage</th> 
+                <th><button type="button" class="btn btn-success" (click)="goTo()">Add Television</button></th>
+            </tr>
+        </thead>
+         <tbody>
+            <tr *ngFor="let m of hello">
+                <td>{{m.televisionId}}</td>
+                <td>{{m.televisionName}}</td>
+                <td>{{m.televisionPrice}}</td>
+                 <td>  <img [src]="m.televisionImage"  width="100" height="100">
+                   </td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="col-md-12 " >
+    <div class="card col-md-4 " *ngFor="let m of hello">
+    <img [src]="m.televisionImage" >
+    <div class="card-title text-uppercase" >
+    <p>{{m.televisionName}}</p>
+    </div>
+    <div class="card-desc">
+        <p>${{m.televisionPrice}}</p>
+       
+    </div>
+    
+    </div>
+    
+    </div> 
+    </div>

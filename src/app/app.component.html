@@ -1,0 +1,26 @@
+<div class="container mt-3">
+<div class="row">
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">CATEGORIES
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a routerLink="mobile" >MOBILES</a></li>
+    <li><a routerLink="laptops">LAPTOPS</a></li>
+    <li><a href="televisions">TELEVISIONS</a></li>
+  </ul>
+  </div>
+   
+ <div class="button"></div>
+  <button class="btn btn-success" (click)="gotoLogin()">LoginForm</button>
+</div>
+</div>
+
+<div class="butt">
+  <button type="button" class="btn btn-danger"><a routerLink="login2"> Login</a></button>
+</div>
+
+ 
+
+  <router-outlet></router-outlet>
+
+
